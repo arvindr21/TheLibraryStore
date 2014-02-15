@@ -1,0 +1,14 @@
+<section data-ng-controller="LibrarysController" data-ng-init="findOne()">
+    <span>{{library.created | date:'medium'}}</span> /
+    <span>{{library.user.name}}</span>
+    <h2>{{library.title}}</h2>
+    <div data-ng-show="global.user._id == library.user._id">
+        <a class="btn" href="/#!/librarys/{{library._id}}/edit">
+        	<i class="glyphicon glyphicon-edit"></i>
+        </a>
+        <a class="btn" data-ng-click="remove();">
+            <i class="glyphicon glyphicon-trash"></i>
+        </a>
+    </div>
+    <div>{{library.content}}</div>
+</section>

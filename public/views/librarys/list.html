@@ -1,0 +1,11 @@
+<section data-ng-controller="LibrarysController" data-ng-init="find()">
+	<ul class="librarys unstyled">
+		<li data-ng-repeat="library in librarys">
+			<span>{{library.created | date:'medium'}}</span> |
+			<span>{{library.user.name}}</span>
+			<h2><a data-ng-href="#!/librarys/{{library._id}}">{{library.title}}</a></h2>
+			<div>{{library.content}}</div>
+		</li>
+	</ul>
+	<h1 data-ng-hide="!librarys || librarys.length">No librarys yet. <br> Why don't you <a href="/#!/librarys/create">Create One</a>?</h1>
+</section>

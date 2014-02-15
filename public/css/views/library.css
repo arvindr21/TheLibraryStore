@@ -1,0 +1,15 @@
+h1 {
+    text-align:center
+}
+
+ul.library li:not(:last-child) {
+    border-bottom:1px solid #ccc
+}
+
+@media (max-width: 768px)
+{
+ .auth-dd
+ {
+ 	float: left !important;
+ }
+}
