@@ -1,8 +1,8 @@
 {
   "name": "TheLibraryStore",
   "description": "TheLibraryStore",
-  "version": "0.0.0",
-  "private": false,
+  "version": "0.0.1",
+  "private": true,
   "author": "Arvind Ravulavaru",
   "repository": {
     "type": "git",
