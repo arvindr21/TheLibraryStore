@@ -1,4 +1,4 @@
--The Library Store
+[The Library Store](http://thelibrarystore.herokuapp.com/)
 ------------------
 [![Build Status](https://travis-ci.org/arvindr21/TheLibraryStore.png?branch=master)](https://travis-ci.org/arvindr21/TheLibraryStore)
 
