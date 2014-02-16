@@ -10,3 +10,5 @@ Technology: I have used MEAN stack to build this application.
 - E - Express js
 - A - Angular js
 - N - Node js
+
+The app is deployed here: http://thelibrarystore.herokuapp.com/
