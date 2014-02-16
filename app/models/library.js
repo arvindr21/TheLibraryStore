@@ -27,12 +27,17 @@ var LibrarySchema = new Schema({
     },
     thumb : {
         type: String,
-        default: '',
+        default: 'http://placehold.it/99x99',
+        trim: true
+    },
+    pageUrl : {
+        type: String,
+        default: '/',
         trim: true
     },
     rating : {
         type: String,
-        default: '',
+        default: '1',
         trim: true
     },
     tags : {

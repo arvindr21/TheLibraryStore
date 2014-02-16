@@ -1,14 +1,30 @@
 <section data-ng-controller="LibrarysController" data-ng-init="findOne()">
-    <span>{{library.created | date:'medium'}}</span> /
-    <span>{{library.user.name}}</span>
+    
     <h2>{{library.title}}</h2>
-    <div data-ng-show="global.user._id == library.user._id">
+    
+   <hr/>
+
+    <div class="col-md-2">
+        <img width="99" src='{{ library.thumb }}' alt="{{library.title}}">
+    </div>
+    <div class="col-md-9">
+    <h3>Link to <a target="_blank" data-ng-href="{{library.pageUrl}}">{{library.title}}</a></h3>
+        <span>{{library.content}}</span><br/>
+        <span>Rating : {{library.rating}}/5</span><br/>
+        <span>{{library.tags}}</span>
+        <br/>
+          <span>
+            <span>{{library.created | date:'medium'}}</span> |
+    <span>{{library.user.name}}</span>
+        </span>
+        <br />
+        <span><div data-ng-show="global.user._id == library.user._id">
         <a class="btn" href="/#!/librarys/{{library._id}}/edit">
-        	<i class="glyphicon glyphicon-edit"></i>
+            <i class="glyphicon glyphicon-edit"></i>
         </a>
         <a class="btn" data-ng-click="remove();">
             <i class="glyphicon glyphicon-trash"></i>
         </a>
+    </div></span>
     </div>
-    <div>{{library.content}}</div>
 </section>

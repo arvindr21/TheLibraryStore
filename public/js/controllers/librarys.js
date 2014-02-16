@@ -6,14 +6,17 @@ angular.module('mean.librarys').controller('LibrarysController', ['$scope', '$ro
     $scope.create = function() {
         var library = new Librarys({
             title: this.title,
-            content: this.content
+            content: this.content,
+            thumb : this.thumb,
+            rating : this.rating,
+            tags : this.tags
         });
+        console.log(library);
         library.$save(function(response) {
             $location.path('librarys/' + response._id);
         });
 
-        this.title = '';
-        this.content = '';
+       
     };
 
     $scope.remove = function(library) {

@@ -4,7 +4,7 @@ angular.module('mean.system').controller('HeaderController', ['$scope', 'Global'
     $scope.global = Global;
 
     $scope.menu = [{
-        'title': 'Create New Library',
+        'title': 'Add New Library',
         'link': 'librarys/create'
     }];
     

@@ -1,10 +1,27 @@
 <section data-ng-controller="LibrarysController" data-ng-init="find()">
-	<ul class="librarys unstyled">
-		<li data-ng-repeat="library in librarys">
-			<span>{{library.created | date:'medium'}}</span> |
-			<span>{{library.user.name}}</span>
+	<h2>List of Available Librarys</h2>
+
+	<input type="text" ng-model="search" class="form-control" placeholder="Search Libraries"/>
+	
+	<ul class="librarys">
+		<li data-ng-repeat="library in librarys | filter:search">
 			<h2><a data-ng-href="#!/librarys/{{library._id}}">{{library.title}}</a></h2>
-			<div>{{library.content}}</div>
+			<hr/>
+			 <div class="col-md-2">
+		        <img width="99" ng-src='{{library.thumb}}' alt="{{library.title}}">
+		    </div>
+		     <div class="col-md-9">
+<h3>Link to <a target="_blank" data-ng-href="{{library.pageUrl}}">{{library.title}}</a></h3>
+            
+   <div>{{library.content}}</div><br/>
+        <span>Rating : {{library.rating}}/5</span><br/>
+        <span>{{library.tags}}</span><br/>
+        <span>{{library.created | date:'medium'}}</span> |
+    <span>{{library.user.name}}</span>
+   <br />
+		     </div>
+			<div class="clear"></div>
+			
 		</li>
 	</ul>
 	<h1 data-ng-hide="!librarys || librarys.length">No librarys yet. <br> Why don't you <a href="/#!/librarys/create">Create One</a>?</h1>

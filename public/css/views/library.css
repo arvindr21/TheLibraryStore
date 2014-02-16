@@ -13,3 +13,31 @@ ul.library li:not(:last-child) {
  	float: left !important;
  }
 }
+
+.librarys
+{
+	list-style: none;
+	margin: 0px auto;
+display: block;
+padding: 39px;
+padding-top: 0px;
+}
+.uno
+{
+	width:50%;
+	list-style: none;
+}
+
+hr {
+border-top: 3px solid #787878;
+}
+
+.clear
+{
+	clear: both;
+}
+
+ul.librarys li
+{
+	padding-bottom: 21px;
+}
