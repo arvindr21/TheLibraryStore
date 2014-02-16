@@ -9,9 +9,10 @@ angular.module('mean.librarys').controller('LibrarysController', ['$scope', '$ro
             content: this.content,
             thumb : this.thumb,
             rating : this.rating,
-            tags : this.tags
+            tags : this.tags,
+            pageUrl : this.pageUrl
+
         });
-        console.log(library);
         library.$save(function(response) {
             $location.path('librarys/' + response._id);
         });

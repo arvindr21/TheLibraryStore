@@ -41,3 +41,13 @@ ul.librarys li
 {
 	padding-bottom: 21px;
 }
+.filtered
+{
+	padding: 18px;
+padding-bottom: 0px;
+font-size: 18px;
+display: block;
+text-align: center;
+font-style: italic;
+font-weight: normal;
+}

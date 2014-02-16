@@ -10,15 +10,15 @@
     <div class="col-md-9">
     <h3>Link to <a target="_blank" data-ng-href="{{library.pageUrl}}">{{library.title}}</a></h3>
         <span>{{library.content}}</span><br/>
-        <span>Rating : {{library.rating}}/5</span><br/>
-        <span>{{library.tags}}</span>
+       <!-- <span>Rating : {{library.rating}}/5</span><br/>--><br/>
+        <span>Tags: {{library.tags}}</span>
         <br/>
           <span>
             <span>{{library.created | date:'medium'}}</span> |
     <span>{{library.user.name}}</span>
         </span>
         <br />
-        <span><div data-ng-show="global.user._id == library.user._id">
+        <span><div data-ng-show="global.user._id == library.user._id ">
         <a class="btn" href="/#!/librarys/{{library._id}}/edit">
             <i class="glyphicon glyphicon-edit"></i>
         </a>

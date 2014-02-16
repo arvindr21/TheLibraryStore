@@ -1,8 +1,8 @@
 <section data-ng-controller="LibrarysController" data-ng-init="find()">
 	<h2>List of Available Librarys</h2>
 
-	<input type="text" ng-model="search" class="form-control" placeholder="Search Libraries"/>
-	
+	<input type="text" ng-model="search" class="form-control" placeholder="Search Librarys"/>
+	<label class="filtered">Showing {{(librarys|filter:search).length}}/{{librarys.length}} librarys</label>
 	<ul class="librarys">
 		<li data-ng-repeat="library in librarys | filter:search">
 			<h2><a data-ng-href="#!/librarys/{{library._id}}">{{library.title}}</a></h2>
@@ -14,11 +14,20 @@
 <h3>Link to <a target="_blank" data-ng-href="{{library.pageUrl}}">{{library.title}}</a></h3>
             
    <div>{{library.content}}</div><br/>
-        <span>Rating : {{library.rating}}/5</span><br/>
-        <span>{{library.tags}}</span><br/>
+        <!--<span>Rating : {{library.rating}}/5</span><br/>-->
+        <span>Tags: {{library.tags}}</span><br/>
         <span>{{library.created | date:'medium'}}</span> |
     <span>{{library.user.name}}</span>
    <br />
+   </span>
+        <br />
+
+        <span><div data-ng-show="global.user._id == library.user._id">
+
+        <a class="btn" href="/#!/librarys/{{library._id}}/edit">
+            <i class="glyphicon glyphicon-edit"></i>
+        </a>
+    </div></span>
 		     </div>
 			<div class="clear"></div>
 			
