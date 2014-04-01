@@ -2,7 +2,7 @@
 ------------------
 [![Build Status](https://travis-ci.org/arvindr21/TheLibraryStore.png?branch=master)](https://travis-ci.org/arvindr21/TheLibraryStore)
 
-AIM: After some extensive googling, I was not able to find a common place that listed all the available Javascript framweworks. Hence this project. 
+AIM: ~~After some extensive googling, I was not able to find a common place that listed all the available Javascript framweworks. Hence this project.~~ Found http://www.jsdb.io/.
 
 Technology: I have used MEAN stack to build this application. 
 
